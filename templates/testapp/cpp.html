@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container">
+        <h1 class="text-center mb-4">Welcome To C++ Exam</h1><hr>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <!-- Question 1 -->
+            <div class="mb-4">
+                <p><strong>1. Who developed C++?</strong></p>
+                <input type="radio" name="q1" value="a"> Dennis Ritchie <br>
+                <input type="radio" name="q1" value="b"> Bjarne Stroustrup <br>
+                <input type="radio" name="q1" value="c"> James Gosling <br>
+                <input type="radio" name="q1" value="d"> Guido van Rossum
+            </div>
+
+            <!-- Question 2 -->
+            <div class="mb-4">
+                <p><strong>2. Which symbol is used for single line comments in C++?</strong></p>
+                <input type="radio" name="q2" value="a"> # <br>
+                <input type="radio" name="q2" value="b"> &lt;!-- --&gt; <br>
+                <input type="radio" name="q2" value="c"> // <br>
+                <input type="radio" name="q2" value="d"> **
+            </div>
+
+            <!-- Question 3 -->
+            <div class="mb-4">
+                <p><strong>3. Which function is entry point in C++?</strong></p>
+                <input type="radio" name="q3" value="a"> start() <br>
+                <input type="radio" name="q3" value="b"> main() <br>
+                <input type="radio" name="q3" value="c"> run() <br>
+                <input type="radio" name="q3" value="d"> init()
+            </div>
+
+            <!-- Question 4 -->
+            <div class="mb-4">
+                <p><strong>4. Which header file is used for input and output?</strong></p>
+                <input type="radio" name="q4" value="a"> &lt;stdio.h&gt; <br>
+                <input type="radio" name="q4" value="b"> &lt;iostream&gt; <br>
+                <input type="radio" name="q4" value="c"> &lt;conio.h&gt; <br>
+                <input type="radio" name="q4" value="d"> &lt;math.h&gt;
+            </div>
+
+            <!-- Question 5 -->
+            <div class="mb-4">
+                <p><strong>5. Which operator is used for scope resolution?</strong></p>
+                <input type="radio" name="q5" value="a"> . <br>
+                <input type="radio" name="q5" value="b"> -> <br>
+                <input type="radio" name="q5" value="c"> :: <br>
+                <input type="radio" name="q5" value="d"> :
+            </div>
+
+            <div class="text-center">
+                <input type="submit" value="Submit Exam" class="btn btn-primary">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container">
+        <h1 class="text-center mb-4">Welcome To Python Exam</h1><hr>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <!-- Question 1 -->
+            <div class="mb-4">
+                <p><strong>1. Who developed Python?</strong></p>
+                <input type="radio" name="q1" value="a"> James Gosling <br>
+                <input type="radio" name="q1" value="b"> Guido van Rossum <br>
+                <input type="radio" name="q1" value="c"> Dennis Ritchie <br>
+                <input type="radio" name="q1" value="d"> Bjarne Stroustrup
+            </div>
+
+            <!-- Question 2 -->
+            <div class="mb-4">
+                <p><strong>2. Which keyword is used to define a function in Python?</strong></p>
+                <input type="radio" name="q2" value="a"> func <br>
+                <input type="radio" name="q2" value="b"> define <br>
+                <input type="radio" name="q2" value="c"> def <br>
+                <input type="radio" name="q2" value="d"> function
+            </div>
+
+            <!-- Question 3 -->
+            <div class="mb-4">
+                <p><strong>3. Which data type is immutable?</strong></p>
+                <input type="radio" name="q3" value="a"> List <br>
+                <input type="radio" name="q3" value="b"> Dictionary <br>
+                <input type="radio" name="q3" value="c"> Set <br>
+                <input type="radio" name="q3" value="d"> Tuple
+            </div>
+
+            <!-- Question 4 -->
+            <div class="mb-4">
+                <p><strong>4. Which symbol is used for comments in Python?</strong></p>
+                <input type="radio" name="q4" value="a"> // <br>
+                <input type="radio" name="q4" value="b"> &lt;!-- --&gt; <br>
+                <input type="radio" name="q4" value="c"> # <br>
+                <input type="radio" name="q4" value="d"> **
+            </div>
+
+            <!-- Question 5 -->
+            <div class="mb-4">
+                <p><strong>5. Which function is used to get input from user?</strong></p>
+                <input type="radio" name="q5" value="a"> scan() <br>
+                <input type="radio" name="q5" value="b"> get() <br>
+                <input type="radio" name="q5" value="c"> input() <br>
+                <input type="radio" name="q5" value="d"> read()
+            </div>
+
+            <div class="text-center">
+                <input type="submit" value="Submit Exam" class="btn btn-primary">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

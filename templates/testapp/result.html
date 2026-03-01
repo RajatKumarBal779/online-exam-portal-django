@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container text-center">
+        <h1>Exam Result.</h1><hr>
+        <h2>Your Score: {{score}}/5</h2>
+        {% if score >= 4 %}
+        <h3 class="text-success">Excellent Performance! 🎉</h3>
+        {% elif score >= 2 %}
+        <h3 class="text-warning">Good Try 👍 Keep Improving.</h3>
+        {% else %}
+        <h3 class="text-danger">You Need More Practice 📘</h3>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
